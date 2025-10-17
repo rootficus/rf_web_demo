@@ -1,17 +1,12 @@
-import { Route, Routes } from "react-router-dom";
+// src/App.tsx
 import "./style/App.scss";
-import Home from "./pages";
-import AboutPage from "./pages/about";
-import ContactPage from "./pages/contact";
+import Header from "./components/common/Header";
 
 function App() {
   return (
     <div className="App">
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<AboutPage />} />
-        <Route path="/contact" element={<ContactPage />} />
-      </Routes>
+      <Header />
+      {/* Your page content goes here */}
     </div>
   );
 }

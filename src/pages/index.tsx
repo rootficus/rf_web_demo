@@ -1,37 +1,42 @@
-import { useFormik } from "formik";
-import CustomButton from "../components/atoms/button";
+// src/pages/index.tsx
+import React from "react";
+import { Formik, Form, Field, FieldProps } from "formik";
 import InputField from "../components/atoms/input";
-import CustomCheckbox from "../components/atoms/checkbox";
+import CustomCheckbox from "../components/atoms/checkBox";
+import CustomButton from "../components/atoms/button";
+import Header from "../components/common/Header";
 
-const Home = () => {
-  // const [text, setText] = useState("");
-  const formik = useFormik({
-    initialValues: { title: "", check: false },
-    onSubmit: (values) => {
-      console.log("values", values);
-    },
-  });
-  console.log("formik", formik.values);
-
+const Home: React.FC = () => {
   return (
-    <div>
-      <CustomButton props={{ variant: "outlined", color: "secondary" }}>
-        new button
-      </CustomButton>
-      <InputField
-        formik={formik}
-        label="Label"
-        props={{
-          // rows: 3,
-          // multiline: true,
-          placeholder: "Enter title",
-          name: "title",
-          // value: text,
-          // onChange: (e) => setText(e.target.value),
-        }}
-      />
-      <CustomCheckbox label="hello" formik={formik} props={{ name: "check" }} />
-    </div>
+    <>
+      <Header />
+      <div style={{ padding: "2rem", maxWidth: "600px", margin: "0 auto" }}>
+        <Formik
+          initialValues={{ title: "", check: false }}
+          onSubmit={(values) => {
+            console.log("Form submitted:", values);
+          }}
+        >
+          {() => (
+            <Form>
+              <Field name="title">
+                {({ field }: FieldProps) => (
+                  <InputField label="Your Name" {...field} />
+                )}
+              </Field>
+
+              <Field name="check">
+                {({ field, meta, form }: FieldProps) => (
+                  <CustomCheckbox label="Subscribe to updates" field={field} meta={meta} form={form} />
+                )}
+              </Field>
+
+              <CustomButton type="submit">Submit</CustomButton>
+            </Form>
+          )}
+        </Formik>
+      </div>
+    </>
   );
 };
 
