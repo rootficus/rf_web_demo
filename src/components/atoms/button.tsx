@@ -1,23 +1,30 @@
-// src/components/atoms/button.tsx
 import React from "react";
-import { Button, ButtonProps } from "@mui/material";
+import { Button } from "@mui/material";
 
-const CustomButton: React.FC<ButtonProps> = (props) => {
+interface CustomButtonProps {
+  children: React.ReactNode;
+  onClick?: () => void;
+  type?: "button" | "submit" | "reset";
+}
+
+const CustomButton: React.FC<CustomButtonProps> = ({ children, onClick, type = "button" }) => {
   return (
     <Button
       variant="contained"
+      color="primary"
+      onClick={onClick}
+      type={type}
       sx={{
-        backgroundColor: "#6C5CE7",
-        color: "#FFFFFF",
-        borderRadius: "6px",
         textTransform: "none",
         fontWeight: "bold",
-        "&:hover": {
-          backgroundColor: "#5a4bd0",
-        },
+        borderRadius: "8px",
+        paddingX: "24px",
+        paddingY: "12px",
+        fontSize: "16px",
       }}
-      {...props} // ✅ Spread all props including type, onClick, etc.
-    />
+    >
+      {children}
+    </Button>
   );
 };
 
