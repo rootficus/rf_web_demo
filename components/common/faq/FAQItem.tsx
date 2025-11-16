@@ -4,11 +4,15 @@ import { ChevronDownIcon } from '@heroicons/react/24/solid';
 interface FAQItemProps {
   number: string;
   question: string;
+  index?: number; // ✅ Added to fix build error
 }
 
-const FAQItem: React.FC<FAQItemProps> = ({ number, question }) => {
+const FAQItem: React.FC<FAQItemProps> = ({ number, question, index }) => {
   return (
-    <div className="py-6 px-4 md:px-8 flex justify-between items-center bg-white">
+    <div
+      className="py-6 px-4 md:px-8 flex justify-between items-center bg-white"
+      style={index !== undefined ? { transitionDelay: `${index * 100}ms` } : {}}
+    >
       <div className="flex items-center gap-6">
         <span className="text-[#4254F6] text-lg font-medium font-manrope">{number}</span>
         <h3 className="text-[#1D1D21] text-base md:text-lg font-semibold font-manrope">
