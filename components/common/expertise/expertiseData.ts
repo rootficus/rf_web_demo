@@ -7,4 +7,4 @@ export const expertiseIcons = [
   { name: 'JavaScript', src: '/icons/js.svg' },
   { name: 'CSS', src: '/icons/css.svg' },
   { name: 'Java', src: '/icons/java.svg' },
-]
+];
