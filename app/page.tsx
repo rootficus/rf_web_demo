@@ -17,9 +17,9 @@ import TrustedBySection from '@/components/common/trusted/TrustedBySection'
 import LogoCarousel from '@/components/common/trusted/LogoCarousel'
 import TrustStats from '@/components/common/trusted/TrustStats'
 import ExpertiseSection from '@/components/common/expertise/ExpertiseSection'
-// import ContactSection from '@/components/contact/ContactSection'
-import Footer from '@/components/common/footer/Footer'
 import CallToActionBanner from '@/components/sections/CallToActionBanner'
+import FooterCTA from '@/components/common/footer/FooterCTA'
+import Footer from '@/components/common/footer/Footer'
 
 export default function Page() {
   return (
@@ -61,21 +61,23 @@ export default function Page() {
 
           <TrustedBySection />
 
-          {/* ✅ LogoCarousel placed directly below TrustedBySection */}
           <div className="w-full flex justify-center mt-12">
             <LogoCarousel />
           </div>
 
-          {/* ✅ TrustStats placed directly below LogoCarousel */}
           <div className="w-full flex justify-center mt-12">
             <TrustStats />
           </div>
 
           <FAQSection />
-          <ExpertiseSection />
-          <CallToActionBanner />
-          {/* <CTASection /> */}
-          {/* <ContactSection /> */}
+
+          {/* Expertise + CTA + FooterCTA stacked seamlessly */}
+          <div className="w-full flex flex-col gap-0">
+            <ExpertiseSection />
+            <CallToActionBanner />
+            <FooterCTA />
+          </div>
+
           <Footer />
         </main>
       </div>
