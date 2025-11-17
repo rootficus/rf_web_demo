@@ -1,23 +1,19 @@
 @import "tailwindcss";
 
 :root {
-  /* Base Colors */
   --background: #FAFAFA;
   --foreground: #1D1D21;
   --muted: #718096;
 
-  /* Brand Colors */
   --primary: #F76680;
   --primary-dark: #57007B;
   --accent-yellow: rgba(217, 223, 157, 0.3);
   --accent-blue: #70EEFF;
   --accent-pink: #F6BFFF;
 
-  /* Typography */
   --font-sans: 'Inter', 'Poppins', Arial, Helvetica, sans-serif;
   --font-mono: Menlo, Monaco, Consolas, 'Courier New', monospace;
 
-  /* Font Sizes */
   --heading-xl: 90px;
   --heading-lg: 64px;
   --heading-md: 48px;
@@ -25,24 +21,25 @@
   --body-md: 21px;
   --body-sm: 16px;
 
-  /* Line Heights */
   --line-xl: 112px;
   --line-lg: 77px;
   --line-md: 60px;
   --line-body: 48px;
 
-  /* Border Radius */
   --radius-xl: 50px;
   --radius-btn: 15px;
   --radius-card: 20px;
   --radius-icon: 18.8256px;
 
-  /* Shadows */
   --shadow-btn: 0px 7.96px 97.51px rgba(0, 0, 0, 0.15);
 
-  /* Blur */
   --blur-eclipse: 210px;
   --blur-soft: 30px;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
 }
 
 body {

@@ -6,9 +6,7 @@ import Box from '@/components/common/Box'
 import HeroSection from '@/components/common/HeroSection'
 import AndroidSkillSection from '@/components/common/AndroidSkillSection'
 import PortfolioShowcase from '@/components/common/portfolio/PortfolioShowCase'
-// import StatsSection from '@/components/common/stats/StatsSection'
 import FAQSection from '@/components/common/faq/FAQSection'
-// import CTASection from '@/components/common/cta/CTASection'
 import Eclipse from '@/components/common/visuals/Eclipse'
 import Eclipse2 from '@/components/common/visuals/Eclipse2'
 import Eclipse3 from '@/components/common/visuals/Eclipse3'
@@ -26,7 +24,8 @@ export default function Page() {
     <>
       <Header />
 
-      <div className="relative w-full bg-[#FAFAFA] overflow-hidden">
+      <div className="relative w-full min-h-screen overflow-x-hidden bg-[#FAFAFA]">
+        {/* Visual Layers */}
         <Eclipse />
         <Eclipse2 />
         <Eclipse3 />
@@ -43,7 +42,10 @@ export default function Page() {
             ctaText="Consult Our Android Team"
           />
 
-          <Box />
+          {/* Box moved directly below HeroSection */}
+          <div className="w-full flex justify-center">
+            <Box />
+          </div>
 
           <section className="flex flex-col items-center gap-6 text-center w-full max-w-[1359px]">
             <h2 className="text-[40px] md:text-[64px] leading-[77px] font-bold text-[#1D1D21] font-poppins">
@@ -57,8 +59,6 @@ export default function Page() {
           </section>
 
           <PortfolioShowcase />
-          {/* <StatsSection /> */}
-
           <TrustedBySection />
 
           <div className="w-full flex justify-center mt-12">
@@ -71,7 +71,6 @@ export default function Page() {
 
           <FAQSection />
 
-          {/* Expertise + CTA + FooterCTA stacked seamlessly */}
           <div className="w-full flex flex-col gap-0">
             <ExpertiseSection />
             <CallToActionBanner />

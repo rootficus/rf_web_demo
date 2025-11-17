@@ -7,7 +7,7 @@ export default function Box() {
       {/* Background Image Layer */}
       <div className="absolute w-[1750px] h-[750px] left-[121px] top-[30px]">
         <Image
-          src="/Substract.png"
+          src="/hello.png"
           alt="Background"
           width={1750}
           height={750}
