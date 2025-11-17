@@ -1,4 +1,11 @@
-export const expertiseIcons = [
+// Define a type for each icon entry
+export interface ExpertiseIcon {
+  name: string;
+  src: string;
+}
+
+// Explicitly type the array
+export const expertiseIcons: ExpertiseIcon[] = [
   { name: 'HTML', src: '/icons/html.svg' },
   { name: 'Ruby', src: '/icons/ruby.svg' },
   { name: 'C', src: '/icons/c.svg' },
