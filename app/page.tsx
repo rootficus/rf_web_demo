@@ -2,7 +2,7 @@
 
 import Header from '@/components/common/Header'
 import Breadcrumb from '@/components/common/Breadcrumb'
-import Box from '@/components/common/Box'
+// import Box from '@/components/common/Box' // Uncomment if Box is used inside HeroSection
 import HeroSection from '@/components/common/HeroSection'
 import AndroidSkillSection from '@/components/common/AndroidSkillSection'
 import PortfolioShowcase from '@/components/common/portfolio/PortfolioShowCase'
@@ -32,22 +32,20 @@ export default function Page() {
         <EllipseGroup />
 
         <main className="relative z-[2] flex flex-col items-center w-full px-4 md:px-12 lg:px-24 py-8 space-y-24">
+          {/* Breadcrumb */}
           <div className="w-full">
             <Breadcrumb />
           </div>
 
+          {/* Hero Section */}
           <HeroSection
             title="Leading Android App Development Firm"
             subtitle="Enterprise-grade, user-friendly, and impactful Android apps using state-of-the-art technologies."
             ctaText="Consult Our Android Team"
           />
 
-          {/* Box moved directly below HeroSection */}
-          <div className="w-full flex justify-center">
-            <Box />
-          </div>
-
-          <section className="flex flex-col items-center gap-6 text-center w-full max-w-[1359px]">
+          {/* Android Skill Section pushed further down */}
+          <section className="mt-[400px] flex flex-col items-center gap-6 text-center w-full max-w-[1359px]">
             <h2 className="text-[40px] md:text-[64px] leading-[77px] font-bold text-[#1D1D21] font-poppins">
               Deploy Android Team with Specific Skill Set
             </h2>
@@ -58,25 +56,33 @@ export default function Page() {
             <AndroidSkillSection />
           </section>
 
+          {/* Portfolio Showcase */}
           <PortfolioShowcase />
+
+          {/* Trusted By Section */}
           <TrustedBySection />
 
-          <div className="w-full flex justify-center mt-12">
+          {/* Logo Carousel */}
+          <div className="w-full flex justify-center">
             <LogoCarousel />
           </div>
 
-          <div className="w-full flex justify-center mt-12">
+          {/* Trust Stats */}
+          <div className="w-full flex justify-center">
             <TrustStats />
           </div>
 
+          {/* FAQ Section */}
           <FAQSection />
 
+          {/* Expertise + CTA + FooterCTA */}
           <div className="w-full flex flex-col gap-0">
             <ExpertiseSection />
             <CallToActionBanner />
             <FooterCTA />
           </div>
 
+          {/* Footer */}
           <Footer />
         </main>
       </div>
