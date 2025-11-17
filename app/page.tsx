@@ -26,13 +26,13 @@ export default function Page() {
     <>
       <Header />
 
-      <div className="relative w-full h-full bg-[#FAFAFA] overflow-hidden">
+      <div className="relative w-full bg-[#FAFAFA] overflow-hidden">
         <Eclipse />
         <Eclipse2 />
         <Eclipse3 />
         <EllipseGroup />
 
-        <main className="relative z-[2] flex flex-col items-center px-4 md:px-12 lg:px-24 py-8 space-y-24">
+        <main className="relative z-[2] flex flex-col items-center w-full px-4 md:px-12 lg:px-24 py-8 space-y-24">
           <div className="w-full">
             <Breadcrumb />
           </div>
@@ -45,11 +45,11 @@ export default function Page() {
 
           <Box />
 
-          <section className="flex flex-col items-center gap-6 text-center max-w-[1359px]">
-            <h2 className="text-[64px] leading-[77px] font-bold text-[#1D1D21] font-poppins">
+          <section className="flex flex-col items-center gap-6 text-center w-full max-w-[1359px]">
+            <h2 className="text-[40px] md:text-[64px] leading-[77px] font-bold text-[#1D1D21] font-poppins">
               Deploy Android Team with Specific Skill Set
             </h2>
-            <p className="text-[24px] leading-[48px] font-medium text-[rgba(113,128,150,0.9)] font-poppins">
+            <p className="text-[18px] md:text-[24px] leading-[48px] font-medium text-[rgba(113,128,150,0.9)] font-poppins">
               At RFBiTE, we connect you with top-tier software developers tailored to your needs. Our
               experts excel in specific technologies, ensuring customized solutions for your company.
             </p>

@@ -17,11 +17,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className="scroll-smooth">
       <body className={`${poppins.variable} font-poppins font-sans bg-background text-foreground`}>
-        <div className="relative w-full overflow-hidden">
-          {/* Global layout grid */}
-          <div className="w-full max-w-[1359px] mx-auto px-4 md:px-12 lg:px-24">
+        <div className="relative w-full min-h-screen overflow-x-hidden">
+          <main className="w-full max-w-screen-2xl mx-auto px-4 md:px-12 lg:px-24">
             {children}
-          </div>
+          </main>
         </div>
       </body>
     </html>
