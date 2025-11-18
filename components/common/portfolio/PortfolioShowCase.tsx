@@ -4,53 +4,84 @@ import Image from 'next/image'
 
 const portfolioItems = [
   {
-    title: 'E-Commerce App',
-    description: 'A scalable Android e-commerce platform with real-time inventory, payment gateway, and user analytics.',
-    image: '/images/portfolio/ecommerce.png',
+    title: 'Concert Booking App',
+    date: 'Aug 09, 2024',
+    duration: '20 Weeks',
+    services: ['UI/UX Design', 'Research', 'Development', 'Quality Analyst'],
+    description:
+      'Lorem ipsum dolor sit amet consectetur. Risus iaculis sit tortor lorem sit sodales suspendisse velit ac.',
+    image: '/Concert.png',
   },
   {
-    title: 'Fitness Tracker',
-    description: 'Tracks workouts, calories, and progress using Jetpack Compose and Firebase integration.',
-    image: '/images/portfolio/fitness.png',
-  },
-  {
-    title: 'Food Delivery App',
-    description: 'Built with MVVM, Retrofit, and Room DB. Supports live tracking and dynamic menus.',
-    image: '/images/portfolio/food-delivery.png',
+    title: 'Travel Booking App',
+    date: 'Aug 09, 2024',
+    duration: '10 Weeks',
+    services: ['UI/UX Design', 'Research', 'Development', 'Quality Analyst'],
+    description:
+      'Arcu viverra bibendum facilisis integer et orci aliquam non molestie. Dictum in pharetra odio porta.',
+    image: '/Travel.png',
   },
 ]
 
 export default function PortfolioShowcase() {
   return (
-    <section className="w-full max-w-[1359px] mx-auto px-4 py-16 text-center">
-      <h2 className="text-[48px] leading-[56px] font-bold text-[#1D1D21] font-poppins mb-6">
-        Portfolio Showcase
-      </h2>
-      <p className="text-[20px] leading-[32px] text-[rgba(113,128,150,0.9)] font-poppins mb-12">
-        Explore our recent Android projects built with modern architecture and scalable design principles.
-      </p>
+    <section className="w-full max-w-screen-xl mx-auto px-4 py-24 space-y-16">
+      {/* Heading */}
+      <div className="text-left">
+        <h2 className="text-[64px] leading-[83px] font-bold font-inter capitalize text-[#1D1D21]">
+          Discover The Extensive Array Of Cutting-Edge{' '}
+          <span className="bg-gradient-to-r from-[#F76680] to-[#57007B] bg-clip-text text-transparent">
+            IT Services
+          </span>{' '}
+          We Offer
+        </h2>
+        <div className="mt-4 w-[543px] h-[1px] bg-[rgba(12,11,72,0.8)]" />
+      </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {/* Grid */}
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
         {portfolioItems.map((item, index) => (
           <div
             key={index}
-            className="bg-white rounded-xl shadow-md overflow-hidden transition-transform hover:scale-[1.02]"
+            className={`rounded-[40px] shadow-md p-8 space-y-6 flex flex-col justify-between ${
+              item.title === 'Travel Booking App' ? 'bg-[#F2E6E6]' : 'bg-[#F2F2F2]'
+            }`}
           >
-            <div className="relative w-full h-[220px]">
-              <Image
-                src={item.image}
-                alt={item.title}
-                fill
-                className="object-cover"
-              />
-            </div>
-            <div className="p-6 text-left">
-              <h3 className="text-[22px] font-semibold text-[#1D1D21] mb-2 font-poppins">
+            <div className="space-y-4">
+              <h3 className="text-[35px] leading-[43px] font-bold text-[#1D1D21] font-inter">
                 {item.title}
               </h3>
-              <p className="text-[16px] text-[rgba(113,128,150,0.9)] font-poppins">
+
+              <div className="flex items-center gap-3 text-[19px] leading-[23px] text-[rgba(26,32,44,0.5)] font-inter">
+                <span>{item.date}</span>
+                <span className="w-[5px] h-[5px] rounded-full bg-[rgba(26,32,44,0.5)]" />
+                <span className="font-bold">{item.duration}</span>
+              </div>
+
+              <div className="flex flex-wrap gap-[13.66px]">
+                {item.services.map((service, idx) => (
+                  <span
+                    key={idx}
+                    className="px-[16px] py-[6px] text-[21px] leading-[26px] font-medium text-[#1D1D21] bg-[#E1E0E0] rounded-full font-inter"
+                  >
+                    {service}
+                  </span>
+                ))}
+              </div>
+
+              <p className="text-[19px] leading-[34px] text-[#1D1D21] opacity-60 font-inter">
                 {item.description}
               </p>
+            </div>
+
+            {/* Mockup Image */}
+            <div className="relative w-full h-[400px] mt-6">
+              <Image
+                src={item.image}
+                alt={`${item.title} mockup`}
+                fill
+                className="object-contain"
+              />
             </div>
           </div>
         ))}
