@@ -3,17 +3,17 @@ import Image from 'next/image';
 
 export default function Box() {
   return (
-    <section className="relative w-[1752px] h-[797px] z-[1]">
-      {/* Background Image Layer */}
-      <div className="absolute w-[1750px] h-[750px] left-[121px] top-[30px]">
+    <div className="w-full flex justify-center items-center">
+      <div className="w-full max-w-[1000px] px-4">
         <Image
           src="/hello.png"
-          alt="Background"
-          width={1750}
-          height={750}
-          className="rounded-[50px]"
+          alt="Centered image"
+          width={1000}
+          height={500}
+          className="w-full h-auto object-contain mx-auto rounded-[30px]"
+          priority
         />
       </div>
-    </section>
+    </div>
   );
 }

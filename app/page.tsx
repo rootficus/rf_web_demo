@@ -44,7 +44,6 @@ export default function Page() {
           />
 
           {/* Spacer to push all content well below Hero image */}
-          <div className="h-[1600px]" />
 
           {/* Android Skill Section */}
           <section className="flex flex-col items-center gap-6 text-center w-full max-w-[1359px]">
