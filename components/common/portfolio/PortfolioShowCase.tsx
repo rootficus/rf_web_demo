@@ -1,6 +1,7 @@
 'use client'
 
 import Image from 'next/image'
+import PortfolioShowcaseHeader from './PortfolioShowcaseHeader'
 
 const portfolioItems = [
   {
@@ -25,21 +26,12 @@ const portfolioItems = [
 
 export default function PortfolioShowcase() {
   return (
-    <section className="w-full max-w-screen-xl mx-auto px-4 py-24 space-y-16">
-      {/* Heading */}
-      <div className="text-left">
-        <h2 className="text-[64px] leading-[83px] font-bold font-inter capitalize text-[#1D1D21]">
-          Discover The Extensive Array Of Cutting-Edge{' '}
-          <span className="bg-gradient-to-r from-[#F76680] to-[#57007B] bg-clip-text text-transparent">
-            IT Services
-          </span>{' '}
-          We Offer
-        </h2>
-        <div className="mt-4 w-[543px] h-[1px] bg-[rgba(12,11,72,0.8)]" />
-      </div>
+    <section className="w-full px-4 md:px-12 lg:px-24 py-24 space-y-16">
+      {/* Header Section */}
+      <PortfolioShowcaseHeader />
 
       {/* Grid */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-screen-xl mx-auto">
         {portfolioItems.map((item, index) => (
           <div
             key={index}
