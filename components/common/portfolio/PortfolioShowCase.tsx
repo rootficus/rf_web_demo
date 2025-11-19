@@ -62,7 +62,9 @@ export default function PortfolioShowcase() {
                 {item.services.map((service, idx) => (
                   <span
                     key={idx}
-                    className="px-[16px] py-[6px] text-[21px] leading-[26px] font-medium text-[#1D1D21] bg-[#E1E0E0] rounded-full font-inter"
+                    className={`px-[16px] py-[6px] text-[21px] leading-[26px] font-medium text-[#1D1D21] rounded-full font-inter ${
+                      item.title === 'Travel Booking App' ? 'bg-[#EFD8D8]' : 'bg-[#E1E0E0]'
+                    }`}
                   >
                     {service}
                   </span>

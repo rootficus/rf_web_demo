@@ -3,6 +3,7 @@
 import Header from '@/components/common/Header'
 import Breadcrumb from '@/components/common/Breadcrumb'
 import HeroSection from '@/components/common/HeroSection'
+import AndroidHeroSection from '@/components/common/AndroidHeroSection' // ✅ Imported
 import AndroidSkillSection from '@/components/common/AndroidSkillSection'
 import PortfolioShowcase from '@/components/common/portfolio/PortfolioShowCase'
 import FAQSection from '@/components/common/faq/FAQSection'
@@ -36,14 +37,11 @@ export default function Page() {
             <Breadcrumb />
           </div>
 
-          {/* Hero Section */}
-          <HeroSection
-            title="Leading Android App Development Firm"
-            subtitle="Enterprise-grade, user-friendly, and impactful Android apps using state-of-the-art technologies."
-            ctaText="Consult Our Android Team"
-          />
+          {/* Android Hero Section */}
+          <AndroidHeroSection /> {/* ✅ Integrated */}
 
-          {/* Spacer to push all content well below Hero image */}
+          {/* Hero Section */}
+          <HeroSection ctaText="Consult Our Android Team" />
 
           {/* Android Skill Section */}
           <section className="flex flex-col items-center gap-6 text-center w-full max-w-[1359px]">
