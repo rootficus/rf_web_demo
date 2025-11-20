@@ -2,7 +2,7 @@
 
 import Header from '@/components/common/Header'
 import Breadcrumb from '@/components/common/Breadcrumb'
-import AndroidHeroSection from '@/components/common/AndroidHeroSection'
+// import AndroidHeroSection from '@/components/common/AndroidHeroSection'  // ⬅️ commented out
 import HeroSection from '@/components/common/HeroSection'
 import AndroidSkillSection from '@/components/common/AndroidSkillSection'
 import PortfolioShowcase from '@/components/common/portfolio/PortfolioShowCase'
@@ -37,8 +37,8 @@ export default function Page() {
             <Breadcrumb />
           </div>
 
-          {/* Android Hero Section */}
-          <AndroidHeroSection />
+          {/* Android Hero Section (removed since now inside HeroSection) */}
+          {/* <AndroidHeroSection /> */}
 
           {/* General Hero Section */}
           <HeroSection />
