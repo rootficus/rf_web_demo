@@ -1,9 +1,9 @@
-'use client';
-import Image from 'next/image';
+'use client'
+import Image from 'next/image'
 
 export default function Box() {
   return (
-    <div className="w-full flex justify-center items-center">
+    <div className="relative z-[1] w-full flex justify-center items-center">
       <div className="w-full max-w-[1000px] px-4">
         <Image
           src="/hello.png"
@@ -15,5 +15,5 @@ export default function Box() {
         />
       </div>
     </div>
-  );
+  )
 }
