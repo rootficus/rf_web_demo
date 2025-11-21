@@ -7,12 +7,12 @@ type HeroSectionProps = {
   ctaText?: string
 }
 
-export default function HeroSection({ ctaText = "ConsultOur Android Team" }: HeroSectionProps) {
+export default function HeroSection({ ctaText = "Consult Our Android Team" }: HeroSectionProps) {
   return (
-    <section className="relative w-full px-4 py-24 flex flex-col items-center gap-16 bg-[#FAFAFA] overflow-hidden">
-      {/* ✅ Subtract Background Layer */}
+    <section className="relative w-full px-4 py-24 flex flex-col items-center gap-16 bg-transparent overflow-hidden">
+      {/* ✅ Subtract Background Layer (with reduced opacity so eclipse layers show through) */}
       <div
-        className="absolute w-[1750px] h-[750px] left-[121px] top-[30px] bg-no-repeat bg-cover pointer-events-none z-0"
+        className="absolute w-[1750px] h-[750px] left-[121px] top-[30px] bg-no-repeat bg-cover pointer-events-none z-0 opacity-70"
         style={{ backgroundImage: 'url("/Subtract.png")' }}
       />
 

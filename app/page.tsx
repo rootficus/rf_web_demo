@@ -2,7 +2,6 @@
 
 import Header from '@/components/common/Header'
 import Breadcrumb from '@/components/common/Breadcrumb'
-// import AndroidHeroSection from '@/components/common/AndroidHeroSection'  // ⬅️ commented out
 import HeroSection from '@/components/common/HeroSection'
 import AndroidSkillSection from '@/components/common/AndroidSkillSection'
 import PortfolioShowcase from '@/components/common/portfolio/PortfolioShowCase'
@@ -25,23 +24,27 @@ export default function Page() {
       <Header />
 
       <div className="relative w-full min-h-screen overflow-x-hidden bg-[#FAFAFA]">
-        {/* Visual Layers */}
-        <Eclipse />
-        <Eclipse2 />
-        <Eclipse3 />
-        <EllipseGroup />
-
-        <main className="relative z-[2] flex flex-col items-center w-full px-4 md:px-12 lg:px-24 py-8 space-y-24">
+        <main className="relative flex flex-col items-center w-full px-4 md:px-12 lg:px-24 py-8 space-y-24">
           {/* Breadcrumb */}
           <div className="w-full">
             <Breadcrumb />
           </div>
 
-          {/* Android Hero Section (removed since now inside HeroSection) */}
-          {/* <AndroidHeroSection /> */}
+          {/* Hero Section with eclipse visuals behind */}
+          <div className="relative w-full">
+            {/* Visual layers behind hero */}
+            <div className="absolute inset-0 z-0 pointer-events-none">
+              <Eclipse />
+              <Eclipse2 />
+              <Eclipse3 />
+              <EllipseGroup />
+            </div>
 
-          {/* General Hero Section */}
-          <HeroSection />
+            {/* Hero content above visuals */}
+            <div className="relative z-10">
+              <HeroSection />
+            </div>
+          </div>
 
           {/* Android Skill Section */}
           <section className="flex flex-col items-center gap-6 text-center w-full max-w-[1359px]">
