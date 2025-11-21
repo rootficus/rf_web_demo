@@ -14,9 +14,9 @@
   --font-sans: 'Inter', 'Poppins', Arial, Helvetica, sans-serif;
   --font-mono: Menlo, Monaco, Consolas, 'Courier New', monospace;
 
-  --heading-xl: 90px;
-  --heading-lg: 64px;
-  --heading-md: 48px;
+  --heading-xl: clamp(2.5rem, 5vw, 90px);
+  --heading-lg: clamp(2rem, 4vw, 64px);
+  --heading-md: clamp(1.5rem, 3vw, 48px);
   --body-lg: 24px;
   --body-md: 21px;
   --body-sm: 16px;
@@ -46,4 +46,11 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans);
+}
+
+.container {
+  width: 100%;
+  max-width: 1800px;
+  margin: 0 auto;
+  padding: 0 2rem;
 }

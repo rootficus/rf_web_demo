@@ -11,12 +11,12 @@ export default function AndroidSkillSection() {
   return (
     <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 w-full max-w-5xl">
       {skills.map((skill) => (
-        <div
+        <p
           key={skill}
-          className="bg-white border border-gray-200 rounded-lg px-4 py-2 text-center text-sm font-medium text-gray-800 shadow-sm"
+          className="text-center text-sm font-medium text-gray-800"
         >
           {skill}
-        </div>
+        </p>
       ))}
     </div>
   )
