@@ -12,7 +12,7 @@ export default function Footer() {
           <div className="flex flex-col gap-8 max-w-[843px]">
             {/* Logo */}
             <div className="flex items-center gap-4">
-              <img src="/Unionfooter.png" alt="RFBite logo" className="w-[50px] h-[50px] object-contain" />
+              <img src="/unionfooter.png" alt="RFBite logo" className="w-[50px] h-[50px] object-contain" />
               <h2 className="text-[48px] md:text-[75px] leading-[91px] font-inria ml-2">RFBite</h2>
             </div>
 
